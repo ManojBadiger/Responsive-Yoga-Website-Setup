@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #0c704180;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --box-shadow: 2px 10px 20px #0d32214d;
+  --background1: #366c53;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+.section__subheader {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.section__header {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.75rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("assets/background.png");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background1);
+}
+
+.nav__logo .logo {
+  color: var(--white);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--background1);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+
+.nav__links a {
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--white);
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+/* <!-- HEADER SECTION --> */
+
+.header__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.header__image img {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.header__content .section__subheader {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 4.75rem;
+  font-weight: 500;
+  line-height: 5.5rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header__btns .btn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: #FF914D;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header__btns .btn:hover {
+  background-color: #fe8032;
+  border-radius: 5px;
+}
+
+.header__btns a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.header__btns a:hover {
+  color: var(--text-dark);
+}
+
+.header__btns a span {
+  padding: 6px 12px;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 100%;
+}
+
+.header__btns a span:hover {
+  background-color: #04794280;
+}
+
+/* <!-- JOURNEY SECTION --> */
+.journey__grid {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  background-color: #f1ffff;
+}
+
+.journey__image {
+  position: relative;
+}
+
+.journey__image img:nth-child(1) {
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.journey__image img:nth-child(2) {
+  max-width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.journey__content {
+  padding: 2rem 0;
+}
+
+.journey__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.journey__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.journey__content__grid {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.journey__content__grid h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* <!-- EVENTS SECTION --> */
+.events__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.events__card {
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.events__card:hover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.events__card span {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 21px 24px;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.events__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+}
+
+.events__card p {
+  line-height: 1.5rem;
+  color: var(--text-light);
+}
+
+/* <!-- SERVICE SECTION --> */
+
+
+/* <!-- TESTIMONIALS SECTION --> */
+
+
+/* <!-- FOOTER SECTION --> */
+
+
+/* <!-- FOR MOBILE DEVICES --> */
+
+
+/* <!-- FOR LARGER DEVICES --> */
+
